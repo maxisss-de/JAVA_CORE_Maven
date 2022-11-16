@@ -1,8 +1,8 @@
-(Практика: Сборка проектов. Maven)
+(Практика: "Сборка проектов, Maven")
 
-# Задача: Многомодульный проект на Maven
+## Задача: "Многомодульный проект на Maven"
 
-## Описание
+### Описание
 Для закрепления лекционного материала попрактикуемся в том, как создавать проекты. 
 
 Стандартный многомодульный проект имеет составляющие по функционалу:
@@ -13,7 +13,7 @@ api - модуль работы с web;
 
 service - слой сервисов.
 
-## Реализация
+### Реализация
 
 Для начала создайте одномодульный проект - как это было показано на занятии.
 
@@ -93,6 +93,7 @@ mvn clean install
 Для демострации работы модульности в проекте db создадим классы:
 
 ```java
+
 public class DbSetting {
 
     private String name;
@@ -107,6 +108,7 @@ public class DbSetting {
 ```
 
 ```java
+
 public class MyEntity {
 
     private UUID id;
@@ -140,6 +142,7 @@ public class MyEntity {
 ```
 
 ```java
+
 public class Db {
 
     private DbSetting dbSetting;
@@ -168,6 +171,7 @@ public class Db {
 В проекте Service создадим класс:
 
 ```java
+
 public class MyService {
 
     private DbSetting dbSetting = new DbSetting("name", "password");
@@ -193,6 +197,7 @@ public class MyService {
 В проекте api создадим класс:
 
 ```java
+
 public class Main {
 
     public static void main(String[] args) {
